@@ -1,0 +1,91 @@
+update student()
+{
+	tblstudent and tblstudnetsubject ma write garnay purano data delete garnay/post.
+}
+ctrl+K=U to uncomment block of codes.
+
+authorization = role
+authenticate = jastai ma yogesh ho vannay prove garnu nai ho. claim complete garnay.
+
+algorithm study: 
+Fips 140-2 complaint algorithm to know about the encryption and decryption.
+
+role assign garda khari
+web.config ma connection string ma initial catalogue ma aafno database ko name copy paste garnay ho.
+
+
+ctrl+ alt select only column.
+
+viewbag + view data = 
+temp data in asp.net= one action ko data aarko action ma phage garnu paryo vanay temp data use garnay.
+
+ado.net lay low cost linxa compare to entity framwork
+
+cookie ko data time samma basxa
+
+session ko data time samma basxa tara browser close garay paxi harau xa. 
+
+session vanako khas server ko setting ho or server configuration.
+session ko manage garda
+web.config ma gayara system.web ma milaunay
+cookeeless= false garyo vanay save hunxa browserma.
+time out lay time time samma tyo browser enable garnay determine garxa.
+system.web ma sessionstate thapnay.
+
+yo accountcontroller.cs ma 
+ var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            switch (result)
+            {
+                case SignInStatus.Success:
+                    Session["email"]=model.Email
+                    return RedirectToLocal(returnUrl);
+                case SignInStatus.LockedOut:
+                    return View("Lockout");
+                case SignInStatus.RequiresVerification:
+                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                case SignInStatus.Failure:
+                default:
+                    ModelState.AddModelError("", "Invalid login attempt.");
+                    return View(model);
+            }
+
+Loginpartial.cshtml ma
+ <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Hello " +Session["email] + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+
+onactionexecuting vanako execute hunu vanda pahila.
+onactionexecuted vanako execute paxi.
+
+cookiee ko lagi account controller ma
+  var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            switch (result)
+            {
+                case SignInStatus.Success:
+                    //Response.Cookies["email"].Value = model.Email;
+                    //Response.Cookies["email"].Expires = DateTime.Now.AddSeconds(10);
+                    HttpCookie aCookie = new HttpCookie("userinfo");
+                    aCookie.Value = DateTime.Now.ToString();
+                    aCookie["email"] = model.Email;
+                    aCookie.Expires = DateTime.Now.AddSeconds(30);
+                    Response.Cookies.Add(aCookie);
+
+session ko lagi time webconfig ma lakhim kina vanay yo server based ho yadi server based kahi xa vanay webconfig ma lakhnay.
+
+cookie advanced setting ma 
+
+
+Javascript start from now.
+dom= document object model.
+javascrpt is a scripting and programming language.
+jquery is a framework they provide library same as a .net.
+
+for reporting 
+tool 
+NuGet package manager
+manager NuGet  garnay aani search garnay
+microsoft.reporting vanay ra search garay aani web vanay ko web application ko 
+and win for windows application.install which you want.

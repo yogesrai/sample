@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular JS</title>
+	<script src="angular-1.7.2/angular.min.js" type="text/javascript"></script>
+
+	<script>
+		var demo=angular.module('test',[]); //angular module
+
+		demo.controller('myapp', function($scope){ //angular scope
+			$scope.name="Yogesh Rai";
+		});
+	</script>
+</head>
+<body>
+<h2>This is my first angular program</h2>
+<div ng-app="" ng-init="GuestName='Portfolio' " >
+	Welcome User To My {{GuestName}} <b><span ng-bind='GuestName'></span></b>.
+</div>
+
+<div ng-app="test", ng-controller="myapp">
+	<p>Hello Welcome to my profile Mrs.<b>{{name}}</b></p>
+</div>
+</body>
+</html>
